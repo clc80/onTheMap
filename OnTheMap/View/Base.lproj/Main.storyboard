@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8F-gK-nMR">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="k8F-gK-nMR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -36,13 +33,11 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G9S-Ly-dsc">
                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="48"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="neE-67-DaZ">
                                                         <rect key="frame" x="0.0" y="56" width="270" height="48"/>
-                                                        <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                     </textField>
@@ -54,7 +49,7 @@
                                                             <color key="titleColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
-                                                            <action selector="loginPressed:" destination="k8F-gK-nMR" eventType="touchUpInside" id="QP4-Nw-fbd"/>
+                                                            <action selector="loginButtonPressed:" destination="k8F-gK-nMR" eventType="touchUpInside" id="ifB-em-mfZ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -77,7 +72,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <state key="normal" title="Sign up"/>
                                                         <connections>
-                                                            <action selector="signUpButton:" destination="k8F-gK-nMR" eventType="touchUpInside" id="lda-Gl-kVP"/>
+                                                            <action selector="signUpButtonPressed:" destination="k8F-gK-nMR" eventType="touchUpInside" id="7Ie-HF-eI5"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -86,7 +81,7 @@
                                                     <constraint firstAttribute="height" constant="33" id="w2N-xt-9Ws"/>
                                                 </constraints>
                                             </stackView>
-                                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="g07-bn-fYO">
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="sSR-PG-oVj">
                                                 <rect key="frame" x="125" y="355" width="20" height="20"/>
                                             </activityIndicatorView>
                                         </subviews>
@@ -110,11 +105,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="IVp-4a-Q0B"/>
                     <connections>
-                        <outlet property="activityView" destination="g07-bn-fYO" id="07S-tL-Mb0"/>
-                        <outlet property="emailTextField" destination="G9S-Ly-dsc" id="QJb-nL-s3V"/>
-                        <outlet property="loginButton" destination="uug-r0-ttd" id="9zx-Te-Ohj"/>
-                        <outlet property="passwordTextField" destination="neE-67-DaZ" id="PfQ-gt-Qt8"/>
-                        <outlet property="signupButton" destination="PS2-Yq-fAW" id="ejd-PU-6pr"/>
+                        <outlet property="activityView" destination="sSR-PG-oVj" id="gRq-Ac-NXi"/>
+                        <outlet property="loginButton" destination="uug-r0-ttd" id="EeR-7r-eua"/>
+                        <outlet property="passwordTextField" destination="neE-67-DaZ" id="W88-0R-zSR"/>
+                        <outlet property="signupButton" destination="PS2-Yq-fAW" id="ean-rL-yQv"/>
+                        <outlet property="userNameTextField" destination="G9S-Ly-dsc" id="Bkd-kd-JiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sIZ-i2-K41" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -124,7 +119,7 @@
         <!--Map-->
         <scene sceneID="Xw5-gC-cgx">
             <objects>
-                <viewController storyboardIdentifier="MapViewController" id="sKV-gt-e4L" userLabel="Map" customClass="StudentsMapViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="sKV-gt-e4L" userLabel="Map" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jgT-39-7li">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,7 +169,7 @@
         <!--Add Location-->
         <scene sceneID="U7Y-wy-FMe">
             <objects>
-                <viewController storyboardIdentifier="addLocationViewController" id="ozh-OJ-uSO" customClass="addLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addLocationViewController" id="ozh-OJ-uSO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Wz-eJ-6xq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -194,13 +189,11 @@
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Location Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGB-4b-C5n">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="48"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Media URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6sN-Kh-vhK">
                                                 <rect key="frame" x="0.0" y="56" width="270" height="48"/>
-                                                <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -267,10 +260,10 @@
             </objects>
             <point key="canvasLocation" x="5816" y="240"/>
         </scene>
-        <!--Maps Location View Controller-->
+        <!--View Controller-->
         <scene sceneID="aoe-ra-2iS">
             <objects>
-                <viewController storyboardIdentifier="mapsLocationViewController" id="GEN-L4-ddF" customClass="mapsLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapsLocationViewController" id="GEN-L4-ddF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qFI-Df-GoZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -388,28 +381,28 @@
         <!--Student List-->
         <scene sceneID="bpT-26-s2U">
             <objects>
-                <tableViewController storyboardIdentifier="StudentsTableViewController" title="StudentsTableViewController" id="NGZ-HL-06B" userLabel="Student List" customClass="StudentsTableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StudentsTableViewController" title="StudentsTableViewController" id="NGZ-HL-06B" userLabel="Student List" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5hB-FN-Rzl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="studentCell" textLabel="nKx-hq-LKW" detailTextLabel="WpF-gV-SxP" style="IBUITableViewCellStyleSubtitle" id="UZW-6d-8lX">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UZW-6d-8lX" id="S7r-nW-dec">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nKx-hq-LKW">
-                                            <rect key="frame" x="20" y="5" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="20" y="10" width="33.5" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WpF-gV-SxP">
-                                            <rect key="frame" x="20" y="25.5" width="44" height="14.5"/>
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <nil key="textColor"/>
