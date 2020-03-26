@@ -169,7 +169,7 @@
         <!--Add Location-->
         <scene sceneID="U7Y-wy-FMe">
             <objects>
-                <viewController storyboardIdentifier="addLocationViewController" id="ozh-OJ-uSO" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addLocationViewController" id="ozh-OJ-uSO" customClass="AddLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Wz-eJ-6xq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -203,7 +203,7 @@
                                                 <color key="tintColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="FIND LOCATION"/>
                                                 <connections>
-                                                    <action selector="findLocationButton:" destination="ozh-OJ-uSO" eventType="touchUpInside" id="MEj-Gb-9Wy"/>
+                                                    <action selector="findLocationButtonTapped:" destination="ozh-OJ-uSO" eventType="touchUpInside" id="zqj-uw-RdO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -224,7 +224,7 @@
                                     <navigationItem title="Add Location" id="efP-va-Ne7">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="pTc-OI-YPx">
                                             <connections>
-                                                <action selector="cancel:" destination="ozh-OJ-uSO" id="rzM-xQ-RgD"/>
+                                                <action selector="cancelButtonTapped:" destination="ozh-OJ-uSO" id="Dap-Az-5Or"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -244,26 +244,22 @@
                         <viewLayoutGuide key="safeArea" id="O6D-hf-Obj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Location" id="L4k-yQ-ppc">
-                        <barButtonItem key="leftBarButtonItem" title="CANCEL" id="EiB-tg-dUM">
-                            <connections>
-                                <action selector="cancel:" destination="ozh-OJ-uSO" id="Lkc-Pd-cUO"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="CANCEL" id="EiB-tg-dUM"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="findLocationButton" destination="4Li-6Z-XCj" id="FwE-o0-llf"/>
-                        <outlet property="locationName" destination="sGB-4b-C5n" id="HdC-mg-OOF"/>
-                        <outlet property="mediaURL" destination="6sN-Kh-vhK" id="aK7-2b-34d"/>
+                        <outlet property="findLocationButton" destination="4Li-6Z-XCj" id="74B-s4-xOP"/>
+                        <outlet property="locationName" destination="sGB-4b-C5n" id="RX0-dw-iba"/>
+                        <outlet property="mediaURL" destination="6sN-Kh-vhK" id="9MJ-es-GHX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GEX-00-i6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5816" y="240"/>
         </scene>
-        <!--View Controller-->
+        <!--Maps Location View Controller-->
         <scene sceneID="aoe-ra-2iS">
             <objects>
-                <viewController storyboardIdentifier="mapsLocationViewController" id="GEN-L4-ddF" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mapsLocationViewController" id="GEN-L4-ddF" customClass="MapsLocationViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qFI-Df-GoZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -292,7 +288,7 @@
                                     <navigationItem id="B2t-NX-Xvl">
                                         <barButtonItem key="leftBarButtonItem" title="Add Location" id="O6Z-9z-mKr">
                                             <connections>
-                                                <action selector="backButtonPressed:" destination="GEN-L4-ddF" id="To8-s6-tBG"/>
+                                                <action selector="backButtonPressed:" destination="GEN-L4-ddF" id="Qwb-nD-jcy"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -315,7 +311,7 @@
                         <viewLayoutGuide key="safeArea" id="wb1-UY-CNa"/>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="WPD-P9-DsO" id="QaA-UV-b43"/>
+                        <outlet property="mapView" destination="WPD-P9-DsO" id="sZz-qF-1IT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D1Z-1N-Ri4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -381,7 +377,7 @@
         <!--Student List-->
         <scene sceneID="bpT-26-s2U">
             <objects>
-                <tableViewController storyboardIdentifier="StudentsTableViewController" title="StudentsTableViewController" id="NGZ-HL-06B" userLabel="Student List" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="StudentsTableViewController" title="StudentsTableViewController" id="NGZ-HL-06B" userLabel="Student List" customClass="StudentsTableViewController" customModule="OnTheMap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="5hB-FN-Rzl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
